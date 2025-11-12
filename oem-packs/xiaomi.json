@@ -1,0 +1,145 @@
+{
+  "oem": "Xiaomi",
+  "packages": [
+    {
+      "pkg": "com.miui.analytics",
+      "label": "Analytics",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "MIUI analytics and telemetry"
+    },
+    {
+      "pkg": "com.xiaomi.mipicks",
+      "label": "GetApps",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Xiaomi app store with ads"
+    },
+    {
+      "pkg": "com.miui.videoplayer",
+      "label": "Mi Video",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Video player with ads"
+    },
+    {
+      "pkg": "com.miui.player",
+      "label": "Mi Music",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Music player with ads"
+    },
+    {
+      "pkg": "com.xiaomi.glgm",
+      "label": "Games",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Game center with ads"
+    },
+    {
+      "pkg": "com.miui.browser",
+      "label": "Mi Browser",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "MIUI browser with ads"
+    },
+    {
+      "pkg": "com.miui.cleanmaster",
+      "label": "Cleaner",
+      "recommendedAction": "disable",
+      "risk": "medium",
+      "reason": "System cleaner, may affect storage management"
+    },
+    {
+      "pkg": "com.miui.securitycenter",
+      "label": "Security",
+      "recommendedAction": "keep",
+      "risk": "high",
+      "reason": "Security app, contains important permissions and battery management"
+    },
+    {
+      "pkg": "com.xiaomi.scanner",
+      "label": "Scanner",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "QR code scanner"
+    },
+    {
+      "pkg": "com.miui.compass",
+      "label": "Compass",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Compass app"
+    },
+    {
+      "pkg": "com.android.browser",
+      "label": "AOSP Browser",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Stock Android browser"
+    },
+    {
+      "pkg": "com.miui.yellowpage",
+      "label": "Yellow Page",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Business directory"
+    },
+    {
+      "pkg": "com.xiaomi.payment",
+      "label": "Mi Pay",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Xiaomi payment service"
+    },
+    {
+      "pkg": "com.mipay.wallet.in",
+      "label": "Mi Wallet",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Digital wallet app"
+    },
+    {
+      "pkg": "com.miui.notes",
+      "label": "Notes",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Note-taking app, data will be lost if uninstalled"
+    },
+    {
+      "pkg": "com.miui.cloudservice",
+      "label": "Mi Cloud",
+      "recommendedAction": "disable",
+      "risk": "medium",
+      "reason": "Cloud sync service, disable only if not using Mi Cloud"
+    },
+    {
+      "pkg": "com.xiaomi.micloud.sdk",
+      "label": "Mi Cloud SDK",
+      "recommendedAction": "disable",
+      "risk": "medium",
+      "reason": "Mi Cloud framework"
+    },
+    {
+      "pkg": "com.miui.weather2",
+      "label": "Weather",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Weather app with ads"
+    },
+    {
+      "pkg": "com.xiaomi.account",
+      "label": "Mi Account",
+      "recommendedAction": "keep",
+      "risk": "high",
+      "reason": "Mi account management, critical for sync and Find My Device"
+    },
+    {
+      "pkg": "com.miui.systemAdSolution",
+      "label": "MSA",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "MIUI System Ads component"
+    }
+  ]
+}

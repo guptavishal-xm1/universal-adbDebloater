@@ -1,0 +1,20 @@
+{
+  "oem": "OnePlus",
+  "version": "2025-11-13",
+  "packages": [
+    {
+      "pkg": "com.oneplus.weather",
+      "label": "OnePlus Weather",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Optional weather app"
+    },
+    {
+      "pkg": "com.oneplus.music",
+      "label": "OnePlus Music",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Optional music app"
+    }
+  ]
+}

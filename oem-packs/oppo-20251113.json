@@ -1,0 +1,27 @@
+{
+  "oem": "OPPO",
+  "version": "2025-11-13",
+  "packages": [
+    {
+      "pkg": "com.coloros.weather",
+      "label": "ColorOS Weather",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Optional weather app"
+    },
+    {
+      "pkg": "com.oppo.market",
+      "label": "OPPO App Market",
+      "recommendedAction": "disable",
+      "risk": "medium",
+      "reason": "Alternative app store, can use Play Store"
+    },
+    {
+      "pkg": "com.heytap.browser",
+      "label": "OPPO Browser",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Optional browser, can use Chrome"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "oem": "Samsung",
+  "packages": [
+    {
+      "pkg": "com.samsung.android.bixby.agent",
+      "label": "Bixby Voice",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Samsung's voice assistant, can be replaced with Google Assistant"
+    },
+    {
+      "pkg": "com.samsung.android.bixby.service",
+      "label": "Bixby Service",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Bixby backend service"
+    },
+    {
+      "pkg": "com.samsung.android.game.gametools",
+      "label": "Game Launcher",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Gaming hub and tools, not needed if you don't game"
+    },
+    {
+      "pkg": "com.samsung.android.game.gos",
+      "label": "Game Optimizing Service",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Game performance optimizer, safe to disable"
+    },
+    {
+      "pkg": "com.samsung.android.app.spage",
+      "label": "Samsung Free",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "News and content aggregator"
+    },
+    {
+      "pkg": "com.samsung.android.da.daagent",
+      "label": "Dual Messenger",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Allows running two instances of messaging apps"
+    },
+    {
+      "pkg": "com.samsung.android.visionintelligence",
+      "label": "Bixby Vision",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Image recognition feature"
+    },
+    {
+      "pkg": "com.facebook.katana",
+      "label": "Facebook",
+      "recommendedAction": "uninstall",
+      "risk": "low",
+      "reason": "Pre-installed Facebook app, privacy concerns"
+    },
+    {
+      "pkg": "com.facebook.system",
+      "label": "Facebook App Manager",
+      "recommendedAction": "disable",
+      "risk": "medium",
+      "reason": "Facebook system services, may affect Facebook/Instagram if disabled"
+    },
+    {
+      "pkg": "com.facebook.appmanager",
+      "label": "Facebook App Installer",
+      "recommendedAction": "disable",
+      "risk": "medium",
+      "reason": "Facebook background installer"
+    },
+    {
+      "pkg": "com.samsung.android.messaging",
+      "label": "Samsung Messages",
+      "recommendedAction": "keep",
+      "risk": "high",
+      "reason": "Default SMS app, disable only if using alternative"
+    },
+    {
+      "pkg": "com.samsung.android.dialer",
+      "label": "Samsung Phone",
+      "recommendedAction": "keep",
+      "risk": "high",
+      "reason": "Default phone dialer, critical for calls"
+    },
+    {
+      "pkg": "com.samsung.android.contacts",
+      "label": "Samsung Contacts",
+      "recommendedAction": "keep",
+      "risk": "high",
+      "reason": "Contact management app"
+    },
+    {
+      "pkg": "com.samsung.SMT",
+      "label": "Samsung Themes",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Theme customization service"
+    },
+    {
+      "pkg": "com.samsung.android.email.provider",
+      "label": "Samsung Email",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Email client, can use alternative"
+    },
+    {
+      "pkg": "com.samsung.android.app.reminder",
+      "label": "Samsung Reminder",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Reminder app integrated with Bixby"
+    },
+    {
+      "pkg": "com.samsung.android.ardrawing",
+      "label": "AR Doodle",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "AR drawing app"
+    },
+    {
+      "pkg": "com.samsung.android.arzone",
+      "label": "AR Zone",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "AR experiences hub"
+    },
+    {
+      "pkg": "com.sec.android.app.sbrowser",
+      "label": "Samsung Internet",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Samsung's web browser, can use Chrome or other browsers"
+    },
+    {
+      "pkg": "com.samsung.android.kidsinstaller",
+      "label": "Kids Installer",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Kids mode installer"
+    }
+  ]
+}

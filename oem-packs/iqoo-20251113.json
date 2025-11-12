@@ -1,0 +1,20 @@
+{
+  "oem": "iQOO",
+  "version": "2025-11-13",
+  "packages": [
+    {
+      "pkg": "com.iqoo.secure",
+      "label": "iQOO Security",
+      "recommendedAction": "keep",
+      "risk": "medium",
+      "reason": "Security features, keep unless causing issues"
+    },
+    {
+      "pkg": "com.vivo.appstore",
+      "label": "vivo App Store",
+      "recommendedAction": "disable",
+      "risk": "medium",
+      "reason": "Alternative app store (iQOO is vivo sub-brand)"
+    }
+  ]
+}

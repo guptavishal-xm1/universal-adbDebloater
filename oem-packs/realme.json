@@ -1,0 +1,145 @@
+{
+  "oem": "Realme",
+  "packages": [
+    {
+      "pkg": "com.heytap.browser",
+      "label": "Realme Browser",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "ColorOS browser with ads"
+    },
+    {
+      "pkg": "com.heytap.market",
+      "label": "App Market",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Realme app store"
+    },
+    {
+      "pkg": "com.heytap.themestore",
+      "label": "Theme Store",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Theme customization store"
+    },
+    {
+      "pkg": "com.coloros.video",
+      "label": "Video",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Video player app"
+    },
+    {
+      "pkg": "com.heytap.music",
+      "label": "Music",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Music player app"
+    },
+    {
+      "pkg": "com.coloros.gamespaceui",
+      "label": "Game Space",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Gaming mode and optimization"
+    },
+    {
+      "pkg": "com.coloros.weather2",
+      "label": "Weather",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Weather app"
+    },
+    {
+      "pkg": "com.coloros.compass2",
+      "label": "Compass",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Compass utility"
+    },
+    {
+      "pkg": "com.coloros.healthcheck",
+      "label": "Phone Manager",
+      "recommendedAction": "keep",
+      "risk": "medium",
+      "reason": "System optimization and security, includes cleaner and battery management"
+    },
+    {
+      "pkg": "com.coloros.smartdrive",
+      "label": "Smart Drive",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Driving mode assistant"
+    },
+    {
+      "pkg": "com.coloros.childrenspace",
+      "label": "Kids Space",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Parental control mode"
+    },
+    {
+      "pkg": "com.nearme.statistics.rom",
+      "label": "System Usage",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Usage analytics and telemetry"
+    },
+    {
+      "pkg": "com.heytap.usercenter",
+      "label": "My Realme",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "User center and community"
+    },
+    {
+      "pkg": "com.realmecomm.app",
+      "label": "Community",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Realme community app"
+    },
+    {
+      "pkg": "com.coloros.backuprestore",
+      "label": "Clone Phone",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Phone data migration tool"
+    },
+    {
+      "pkg": "com.heytap.openid",
+      "label": "HeyTap ID",
+      "recommendedAction": "keep",
+      "risk": "high",
+      "reason": "Account authentication service, critical for Realme/OPPO services"
+    },
+    {
+      "pkg": "com.coloros.assistantscreen",
+      "label": "Smart Assistant",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Left screen assistant panel"
+    },
+    {
+      "pkg": "com.heytap.pictorial",
+      "label": "Wallpaper",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Wallpaper carousel service"
+    },
+    {
+      "pkg": "com.finshell.wallet",
+      "label": "FinShell Pay",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Payment service"
+    },
+    {
+      "pkg": "com.redteamobile.roaming",
+      "label": "Soloop",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Video editor app"
+    }
+  ]
+}

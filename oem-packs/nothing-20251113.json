@@ -1,0 +1,20 @@
+{
+  "oem": "Nothing",
+  "version": "2025-11-13",
+  "packages": [
+    {
+      "pkg": "com.nothing.weather",
+      "label": "Nothing Weather",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Optional weather widget"
+    },
+    {
+      "pkg": "com.nothing.launcher",
+      "label": "Nothing Launcher",
+      "recommendedAction": "keep",
+      "risk": "high",
+      "reason": "System launcher - disabling may cause boot issues"
+    }
+  ]
+}

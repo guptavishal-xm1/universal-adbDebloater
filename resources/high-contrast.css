@@ -1,0 +1,17 @@
+/* High Contrast Override */
+.root {
+    -fx-background-color: #ffffff;
+}
+.label, .button, .table-view, .list-view, .tab, .text-field {
+    -fx-font-weight: 600;
+}
+.table-row-cell:selected { -fx-background-color: #000000; -fx-text-fill: #ffffff; }
+.list-cell:selected { -fx-background-color: #000000; -fx-text-fill: #ffffff; }
+.button { -fx-background-color: #222; -fx-text-fill: #fff; }
+.button:hover { -fx-background-color: #000; }
+.risk-high { -fx-text-fill: #ff0000; }
+.risk-medium { -fx-text-fill: #ff8c00; }
+.risk-low { -fx-text-fill: #007700; }
+.status-bar { -fx-background-color: #000000; -fx-text-fill: #ffffff; }
+.text-field { -fx-border-color: #000000; }
+.progress-bar > .bar { -fx-background-color: #000000; }

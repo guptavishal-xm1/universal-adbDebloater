@@ -1,0 +1,27 @@
+{
+  "oem": "vivo",
+  "version": "2025-11-13",
+  "packages": [
+    {
+      "pkg": "com.vivo.weather",
+      "label": "vivo Weather",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Optional weather app"
+    },
+    {
+      "pkg": "com.vivo.appstore",
+      "label": "vivo App Store",
+      "recommendedAction": "disable",
+      "risk": "medium",
+      "reason": "Alternative app store"
+    },
+    {
+      "pkg": "com.vivo.browser",
+      "label": "vivo Browser",
+      "recommendedAction": "disable",
+      "risk": "low",
+      "reason": "Optional browser"
+    }
+  ]
+}

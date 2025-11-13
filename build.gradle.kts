@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.uadb"
-version = "0.1.0-SNAPSHOT"
+version = "1.0.0"
 
 java {
     toolchain {
@@ -53,12 +53,18 @@ tasks.register<Exec>("jpackage") {
     dependsOn("build")
     
     val appName = "UniversalADBDebloater"
-    val appVersion = project.version.toString().replace("-SNAPSHOT", "")
+    // macOS requires version numbers starting with 1+, not 0.x
+    val rawVersion = project.version.toString().replace("-SNAPSHOT", "")
+    val appVersion = if (rawVersion.startsWith("0.")) {
+        "1." + rawVersion.substring(2)  // Convert 0.1.0 -> 1.1.0
+    } else {
+        rawVersion
+    }
     val mainClass = application.mainClass.get()
     val modulePath = configurations.runtimeClasspath.get().asPath
     
     doFirst {
-        delete("$buildDir/jpackage")
+        delete(layout.buildDirectory.dir("jpackage"))
     }
     
     val osName = System.getProperty("os.name").lowercase()
@@ -73,8 +79,8 @@ tasks.register<Exec>("jpackage") {
         "--app-version", appVersion,
         "--vendor", "Universal ADB Debloater Contributors",
         "--description", "Safely debloat Android devices using ADB",
-        "--dest", "$buildDir/distributions",
-        "--input", "$buildDir/libs",
+        "--dest", "${layout.buildDirectory.get()}/distributions",
+        "--input", "${layout.buildDirectory.get()}/libs",
         "--main-jar", tasks.jar.get().archiveFileName.get(),
         "--main-class", mainClass,
         "--module-path", modulePath,

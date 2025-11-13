@@ -47,19 +47,42 @@ jobs:
         if: matrix.platform == 'linux'
         run: |
           cd build/distributions
-          tar -czf UniversalADBDebloater-Linux.tar.gz UniversalADBDebloater/
+          ls -la
+          # Check for either folder or executable
+          if [ -d "UniversalADBDebloater" ]; then
+            tar -czf UniversalADBDebloater-Linux.tar.gz UniversalADBDebloater
+          else
+            echo "Error: Could not find UniversalADBDebloater folder"
+            exit 1
+          fi
       
       - name: Package for Windows
         if: matrix.platform == 'windows'
+        shell: pwsh
         run: |
           cd build/distributions
-          Compress-Archive -Path UniversalADBDebloater -DestinationPath UniversalADBDebloater-Windows.zip
+          Get-ChildItem
+          if (Test-Path "UniversalADBDebloater") {
+            Compress-Archive -Path UniversalADBDebloater -DestinationPath UniversalADBDebloater-Windows.zip
+          } else {
+            Write-Error "Could not find UniversalADBDebloater folder"
+            exit 1
+          }
       
       - name: Package for macOS
         if: matrix.platform == 'macos'
         run: |
           cd build/distributions
-          zip -r UniversalADBDebloater-macOS.zip UniversalADBDebloater/
+          ls -la
+          # macOS jpackage creates a .app bundle, not a folder
+          if [ -d "UniversalADBDebloater.app" ]; then
+            zip -r UniversalADBDebloater-macOS.zip UniversalADBDebloater.app
+          elif [ -d "UniversalADBDebloater" ]; then
+            zip -r UniversalADBDebloater-macOS.zip UniversalADBDebloater
+          else
+            echo "Error: Could not find app bundle or folder"
+            exit 1
+          fi
       
       - name: Upload artifact
         uses: actions/upload-artifact@v4

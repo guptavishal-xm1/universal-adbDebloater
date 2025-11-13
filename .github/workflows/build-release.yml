@@ -1,0 +1,93 @@
+name: Build Cross-Platform Release
+
+on:
+  push:
+    tags:
+      - 'v*'  # Trigger on version tags like v1.0.0
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  build:
+    name: Build on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        include:
+          - os: ubuntu-latest
+            artifact_name: UniversalADBDebloater-Linux.tar.gz
+            platform: linux
+          - os: windows-latest
+            artifact_name: UniversalADBDebloater-Windows.zip
+            platform: windows
+          - os: macos-latest
+            artifact_name: UniversalADBDebloater-macOS.zip
+            platform: macos
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: 'gradle'
+      
+      - name: Grant execute permission for gradlew (Unix)
+        if: runner.os != 'Windows'
+        run: chmod +x gradlew
+      
+      - name: Build with Gradle
+        run: ./gradlew clean build jpackage
+      
+      - name: Package for Linux
+        if: matrix.platform == 'linux'
+        run: |
+          cd build/distributions
+          tar -czf UniversalADBDebloater-Linux.tar.gz UniversalADBDebloater/
+      
+      - name: Package for Windows
+        if: matrix.platform == 'windows'
+        run: |
+          cd build/distributions
+          Compress-Archive -Path UniversalADBDebloater -DestinationPath UniversalADBDebloater-Windows.zip
+      
+      - name: Package for macOS
+        if: matrix.platform == 'macos'
+        run: |
+          cd build/distributions
+          zip -r UniversalADBDebloater-macOS.zip UniversalADBDebloater/
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact_name }}
+          path: build/distributions/${{ matrix.artifact_name }}
+          retention-days: 30
+  
+  release:
+    name: Create GitHub Release
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            artifacts/**/*.zip
+            artifacts/**/*.tar.gz
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
